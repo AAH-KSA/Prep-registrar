@@ -21,21 +21,35 @@ export interface Student {
   gender: 'Male' | 'Female';
   admittedMajor: string;
   term: string;
-  englishPlacement: string; // e.g., ENGL001, Promoted
-  mathPlacement: string;    // e.g., MATH001, Promoted
+  englishPlacement: string;
+  mathPlacement: string;
   academicLevel: AcademicLevel;
   status: RegistrationStatus;
   updatedAt: string;
+  englishSection?: string;
+  mathSection?: string;
 }
 
 export interface ScheduleRequest {
   id: string;
   studentId: string;
   studentName: string;
-  requestType: 'Section Change' | 'English Shift' | 'Special Needs';
+  requestType: 'Section Change' | 'English Shift';
   details: string;
-  status: 'Pending' | 'Processed';
+  courseName?: string;
+  sectionNumber?: string;
+  status: 'Pending' | 'Registered' | 'Needs Revision';
   createdAt: string;
+}
+
+export interface ActivityLog {
+  id: string;
+  type: 'Admission' | 'Placement' | 'StatusUpdate' | 'Adjustment';
+  description: string;
+  studentId?: string;
+  studentName?: string;
+  timestamp: string;
+  actor: string;
 }
 
 export interface AuthState {

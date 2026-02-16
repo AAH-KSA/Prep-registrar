@@ -107,7 +107,7 @@ const StudentPortal: React.FC<StudentPortalProps> = ({ student }) => {
             <h4 className="font-bold text-sky-900">Official Notice to Students</h4>
             <p className="text-sky-800 text-sm opacity-80 leading-relaxed">
               Placements are finalized based on the latest promotion test results provided by the Prep-Year Department. 
-              If you have recently completed a test, please note that "Dear students, in case of any update it will be reflected shortly."
+              If you have recently completed a test, please note that in case of any update it will be reflected here shortly.
             </p>
             <div className="pt-4 flex gap-4">
                <button className="text-xs font-bold text-sky-600 underline">Contact Prep Department</button>
